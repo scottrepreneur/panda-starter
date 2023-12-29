@@ -5,7 +5,9 @@ export default definePreset({
   theme: {
     extend: {
       tokens: {
-        // test: "red"
+        colors: {
+          primary: { value: 'red' },
+        },
       },
     },
   },
