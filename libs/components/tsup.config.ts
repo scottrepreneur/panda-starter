@@ -7,7 +7,6 @@ export default defineConfig({
   entryPoints: ['src/index.ts'],
   // marks styled-system as an external dependency
   external: ['styled-system'],
-
   // output format
   format: ['esm'],
 });

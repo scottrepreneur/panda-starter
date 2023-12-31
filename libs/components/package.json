@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "panda codegen",
-    "build": "tsup",
+    "build": "panda codegen && tsup",
     "dev": "tsup --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,12 +16,18 @@
   "license": "ISC",
   "devDependencies": {
     "@pandacss/dev": "^0.23.0",
+    "@park-ui/panda-preset": "^0.27.0",
     "@swc/core": "^1.3.101",
     "@types/react": "^18",
     "react-dom": "^18",
     "tsup": "^8.0.1"
   },
   "dependencies": {
-    "react": "^18"
+    "@ark-ui/react": "^1.2.1",
+    "@types/lodash": "^4.14.202",
+    "lodash": "^4.17.21",
+    "react": "^18",
+    "react-hook-form": "^7.49.2",
+    "react-icons": "^4.12.0"
   }
 }

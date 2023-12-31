@@ -1,20 +1,6 @@
-import { ReactNode } from 'react';
-import { css } from 'styled-system/css';
+import { ark } from '@ark-ui/react/factory';
+import { styled, type HTMLStyledProps } from 'styled-system/jsx';
+import { button } from 'styled-system/recipes';
 
-const Button = ({ children }: { children: ReactNode }) => {
-  return (
-    <button
-      className={css({
-        bg: 'blue.100',
-        px: 6,
-        py: 2,
-        _hover: { cursor: 'pointer' },
-      })}
-      type='button'
-    >
-      {children}
-    </button>
-  );
-};
-
-export default Button;
+export const Button = styled(ark.button, button);
+export interface ButtonProps extends HTMLStyledProps<typeof Button> {}

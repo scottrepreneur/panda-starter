@@ -1,3 +1,42 @@
 {
-  "extends": "../../.eslintrc.json"
+  "extends": ["../../.eslintrc.json", "prettier"],
+  "ignorePatterns": ["node_modules/", "dist/"],
+  "rules": {
+    // TYPESCRIPT
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+
+    // REACT
+    "react/require-default-props": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".tsx"]
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "jsx-quotes": ["error", "prefer-single"],
+
+    // DEFAULTS
+    "no-unused-vars": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "typescript": {
+      "configFile": "./tsconfig.json"
+    }
+  }
 }

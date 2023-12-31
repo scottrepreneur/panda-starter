@@ -37,3 +37,4 @@ next-env.d.ts
 
 **/**/styled-system
 **/**/dist
+.vscode/settings.json

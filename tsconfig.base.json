@@ -1,3 +1,11 @@
 {
-  
+  "compilerOptions": {
+    "lib": ["esnext", "dom"],
+    "baseUrl": ".",
+    "paths": {
+      "@panda-starter/ui": ["./libs/components/src/index.ts"],
+      "@panda-starter/utils/*": ["libs/utils/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules"]
 }

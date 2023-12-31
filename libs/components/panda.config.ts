@@ -1,6 +1,15 @@
 import { defineConfig } from '@pandacss/dev';
+import { createPreset } from '@park-ui/panda-preset';
+import preset from './src/preset';
+
+export const parkPreset = createPreset({
+  accentColor: 'sky',
+  grayColor: 'sage',
+  borderRadius: 'sm',
+});
 
 export default defineConfig({
+  presets: [parkPreset, preset],
   // Whether to use css reset
   preflight: true,
 
@@ -10,12 +19,8 @@ export default defineConfig({
   // Files to exclude
   exclude: [],
 
-  // Useful for theme customization
-  theme: {
-    extend: {},
-  },
-
   // The output directory for your css system
   outdir: 'styled-system',
   emitPackage: true,
+  jsxFramework: 'react',
 });

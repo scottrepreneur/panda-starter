@@ -1,15 +1,22 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "parserOptions": {},
+  "parserOptions": {
+    "ecmaVersion": 2023
+  },
+  "ignorePatterns": ["node_modules/*"],
   "plugins": ["@typescript-eslint", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+    "airbnb"
+  ],
   "rules": {
     "prettier/prettier": "error"
   },
   "settings": {
-    "react": {
-      "version": "detect"
-    },
     "typescript": {
       "configFile": "./tsconfig.base.json"
     }

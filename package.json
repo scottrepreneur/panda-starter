@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm run --filter starter-web dev",
-    "build": "pnpm run --filter starter-web build",
+    "dev": "pnpm run --filter @panda-starter/web dev",
+    "build": "pnpm run --filter @panda-starter/web build",
+    "start": "pnpm run --filter @panda-starter/web start",
+    "prepare": "pnpm ui-build && pnpm run -r prepare",
     "ui-build": "pnpm run --filter @panda-starter/ui build",
     "ui-dev": "pnpm run --filter @panda-starter/ui dev",
-    "clean": "rm -rf **/**/node_modules && rm -rf **/**/dist"
+    "clean": "rm -rf node_modules && rm -rf **/**/.next && rm -rf **/**/node_modules && rm -rf **/**/dist"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,9 @@
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/parser": "^6.16.0",
     "eslint": "^8",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-prettier": "^5.1.2",
     "prettier": "^3.1.1",
     "typescript": "^5"
